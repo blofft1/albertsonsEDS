@@ -1,9 +1,10 @@
-/* header and nav layout */
+/* header and nav layout - Albertsons two-tier design */
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
   z-index: 2;
   position: fixed;
+  border-bottom: 1px solid var(--border-color-light);
 }
 
 header nav {
@@ -148,6 +149,14 @@ header .nav-brand {
   line-height: 1;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
+header .nav-brand a {
+  color: var(--accent-color);
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  text-decoration: none;
+}
+
 header nav .nav-brand img {
   width: 128px;
   height: auto;
@@ -233,6 +242,17 @@ header nav .nav-sections ul > li > ul > li {
     position: relative;
   }
 
+  /* Top-level plain links (Grocery, Health, Pharmacy) styled as tabs */
+  header nav .nav-sections .default-content-wrapper > ul > li > a {
+    font-size: var(--body-font-size-s);
+    font-weight: 400;
+    padding: 4px 0;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > a:hover {
+    color: var(--accent-color);
+  }
+
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
     display: none;
     position: relative;
@@ -247,6 +267,8 @@ header nav .nav-sections ul > li > ul > li {
     padding: 16px;
     background-color: var(--light-color);
     white-space: initial;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
@@ -269,4 +291,15 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+}
+
+header nav .nav-tools a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+header nav .nav-tools a:hover {
+  color: var(--accent-color);
 }
