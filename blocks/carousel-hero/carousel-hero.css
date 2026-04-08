@@ -36,12 +36,23 @@
   overflow: hidden;
 }
 
-.carousel-hero .carousel-hero-slide .carousel-hero-slide-image picture {
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-image {
   position: absolute;
   inset: 0;
 }
 
-.carousel-hero .carousel-hero-slide .carousel-hero-slide-image picture > img {
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-image p {
+  margin: 0;
+  height: 100%;
+}
+
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-image picture,
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-image p:has(img) {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -60,23 +71,25 @@
   font-size: 28px;
   font-weight: 700;
   line-height: 1.2;
-  color: #fff;
+  color: var(--text-color);
   margin: 0 0 8px;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .carousel-hero .carousel-hero-slide .carousel-hero-slide-content p {
   font-size: var(--body-font-size-m);
-  color: #fff;
+  color: var(--text-color);
   margin: 0 0 16px;
   line-height: 1.45;
 }
 
-.carousel-hero .carousel-hero-slide .carousel-hero-slide-content a {
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-content a:any-link,
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-content .button-container a {
   display: inline-block;
   padding: 8px 40px;
   background-color: #fff;
   color: var(--text-color);
-  border: 1px solid #fff;
+  border: 1px solid var(--text-color);
   border-radius: var(--button-border-radius);
   font-weight: 600;
   font-size: var(--body-font-size-m);
@@ -85,9 +98,11 @@
   transition: var(--button-transition);
 }
 
-.carousel-hero .carousel-hero-slide .carousel-hero-slide-content a:hover {
-  background-color: var(--light-color);
-  color: var(--accent-color);
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-content a:hover,
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-content .button-container a:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
 }
 
 .carousel-hero .carousel-hero-slide-indicators {

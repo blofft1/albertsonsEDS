@@ -210,14 +210,19 @@ export default {
     const pageBlocks = findBlocksOnPage(document, PAGE_TEMPLATE);
 
     // 3. Parse each block using registered parsers
+    console.log(`[Import] Found ${pageBlocks.length} blocks: ${pageBlocks.map((b) => b.name).join(', ')}`);
     pageBlocks.forEach((block) => {
       const parser = parsers[block.name];
       if (parser) {
         try {
+          console.log(`[Import] Parsing ${block.name} with selector ${block.selector}`);
           parser(block.element, { document, url, params });
+          console.log(`[Import] ✅ Parsed ${block.name}`);
         } catch (e) {
-          console.error(`Failed to parse ${block.name} (${block.selector}):`, e);
+          console.error(`[Import] ❌ Failed to parse ${block.name} (${block.selector}):`, e.message || e);
         }
+      } else {
+        console.warn(`[Import] ⚠️ No parser for ${block.name}`);
       }
     });
 
