@@ -1,4 +1,4 @@
-/* Cards Banner - Albertsons full-width promotional banners with text overlay */
+/* Cards Banner - Albertsons promotional banner cards in a grid */
 
 .cards-banner > ul {
   list-style: none;
@@ -6,45 +6,46 @@
   padding: 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-m);
+  gap: 16px;
 }
 
 .cards-banner > ul > li {
   position: relative;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  min-height: 160px;
   background-color: #f5f3ef;
   border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 140px;
 }
 
 .cards-banner .cards-banner-card-image {
   line-height: 0;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .cards-banner > ul > li img {
   width: 100%;
-  aspect-ratio: 16 / 5;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
 .cards-banner .cards-banner-card-body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  grid-column: 1;
+  grid-row: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 24px 32px;
-  max-width: 50%;
+  padding: 20px 24px;
   z-index: 1;
 }
 
 .cards-banner .cards-banner-card-body h3 {
   font-family: var(--body-font-family);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.2;
   color: var(--text-color);
@@ -52,7 +53,7 @@
 }
 
 .cards-banner .cards-banner-card-body p {
-  font-size: var(--body-font-size-s);
+  font-size: var(--body-font-size-s, 0.875rem);
   color: var(--text-color);
   margin: 0 0 8px;
   line-height: 1.4;
@@ -65,7 +66,7 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: var(--body-font-size-s);
+  font-size: var(--body-font-size-s, 0.875rem);
 }
 
 .cards-banner .cards-banner-card-body a::after {
@@ -79,15 +80,11 @@
 }
 
 @media (width >= 900px) {
+  .cards-banner > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .cards-banner .cards-banner-card-body h3 {
-    font-size: 1.5rem;
-  }
-
-  .cards-banner .cards-banner-card-body p {
-    font-size: var(--body-font-size-m);
-  }
-
-  .cards-banner .cards-banner-card-body {
-    padding: 32px 40px;
+    font-size: 1.25rem;
   }
 }
