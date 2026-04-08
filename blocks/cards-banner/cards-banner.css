@@ -1,19 +1,21 @@
+/* Cards Banner - Albertsons medium promotional banners with image + text plate */
+
 .cards-banner > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-l);
 }
 
 .cards-banner > ul > li {
-  border: 1px solid #dadada;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
   background-color: var(--background-color);
-}
-
-.cards-banner .cards-banner-card-body {
-  margin: 16px;
 }
 
 .cards-banner .cards-banner-card-image {
@@ -22,6 +24,66 @@
 
 .cards-banner > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 1;
   object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+.cards-banner .cards-banner-card-body {
+  padding: var(--spacing-m);
+}
+
+.cards-banner .cards-banner-card-body h3 {
+  font-family: var(--body-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-xxs);
+}
+
+.cards-banner .cards-banner-card-body p {
+  font-size: var(--body-font-size-m);
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-xs);
+  line-height: 1.3;
+}
+
+.cards-banner .cards-banner-card-body a {
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xxs);
+}
+
+.cards-banner .cards-banner-card-body a:hover {
+  color: var(--accent-color);
+}
+
+@media (width >= 900px) {
+  .cards-banner > ul > li {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .cards-banner .cards-banner-card-image {
+    flex: 0 0 60%;
+  }
+
+  .cards-banner > ul > li img {
+    aspect-ratio: auto;
+    height: 100%;
+    border-radius: 16px 0 0 16px;
+  }
+
+  .cards-banner .cards-banner-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-m) var(--spacing-l);
+  }
 }
