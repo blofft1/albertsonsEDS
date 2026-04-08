@@ -137,6 +137,16 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
+  // build top bar
+  const topbar = document.createElement('div');
+  topbar.className = 'nav-topbar';
+  topbar.innerHTML = `<ul>
+    <li><a href="/">Grocery</a></li>
+    <li><a href="/health">Health</a></li>
+    <li><a href="/pharmacy">Pharmacy</a></li>
+    <li><a href="https://business.albertsons.com">For Business</a></li>
+  </ul>`;
+
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
@@ -166,6 +176,7 @@ export default async function decorate(block) {
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
+  navWrapper.append(topbar);
   navWrapper.append(nav);
   block.append(navWrapper);
 }

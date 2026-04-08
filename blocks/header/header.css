@@ -7,6 +7,43 @@ header .nav-wrapper {
   border-bottom: 1px solid var(--border-color-light);
 }
 
+/* topbar - above the main nav */
+header .nav-topbar {
+  border-bottom: 1px solid var(--border-color-light, #e0e0e0);
+  padding: 8px 24px;
+  max-width: 1248px;
+  margin: 0 auto;
+}
+
+header .nav-topbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .nav-topbar li {
+  font-size: var(--body-font-size-xs, 0.75rem);
+  font-weight: 500;
+}
+
+header .nav-topbar a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+header .nav-topbar a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  header .nav-topbar {
+    padding: 8px 32px;
+    max-width: 1264px;
+  }
+}
+
 header nav {
   box-sizing: border-box;
   display: grid;
@@ -55,6 +92,7 @@ header nav p {
   line-height: 1;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 header nav a:any-link {
   color: currentcolor;
 }
@@ -300,6 +338,7 @@ header nav .nav-tools p {
   white-space: nowrap;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-tools a {
   color: var(--text-color);
   text-decoration: none;
