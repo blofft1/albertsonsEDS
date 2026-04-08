@@ -406,9 +406,11 @@ main .section.grey {
   main > .section:has(.carousel-hero) {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
     gap: var(--spacing-m);
     padding: 0 var(--spacing-xl);
     max-width: var(--section-max-width);
     margin: 0 auto;
+    align-items: stretch;
   }
 }

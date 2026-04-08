@@ -162,6 +162,18 @@
 }
 
 @media (width >= 600px) {
+  .carousel-hero {
+    height: 100%;
+  }
+
+  .carousel-hero .carousel-hero-slides-container {
+    height: 100%;
+  }
+
+  .carousel-hero .carousel-hero-slides {
+    height: 100%;
+  }
+
   .carousel-hero .carousel-hero-slide {
     min-height: 400px;
   }

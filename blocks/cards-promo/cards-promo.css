@@ -70,11 +70,23 @@
 
 /* On desktop when next to carousel: stack vertically as sidebar */
 @media (width >= 900px) {
+  .cards-promo {
+    height: 100%;
+  }
+
   .cards-promo > ul {
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+  }
+
+  .cards-promo > ul > li {
+    height: 100%;
   }
 
   .cards-promo > ul > li img {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: auto;
+    height: 100%;
+    object-fit: cover;
   }
 }
