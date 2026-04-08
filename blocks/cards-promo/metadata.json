@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-promo",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-08T03:48:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.albertsons.com/",
+    "originPage": "Albertsons grocery homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "promotional",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title + CTA link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional content cards",
+      "featured category highlights",
+      "marketing campaign tiles"
+    ],
+    "notSuitableFor": [
+      "product listing cards",
+      "team member cards",
+      "text-only cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-08T03:48:00.000Z"
+  }
+}

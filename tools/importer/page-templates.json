@@ -1,0 +1,167 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.albertsons.com/"
+      ],
+      "description": "Albertsons grocery store homepage with promotions, featured products, and store services",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            ".hero-carousel-container"
+          ]
+        },
+        {
+          "name": "cards-promo",
+          "instances": [
+            ".row.hero-flex"
+          ]
+        },
+        {
+          "name": "cards-category",
+          "instances": [
+            ".flex-container.flex-three-six-column"
+          ]
+        },
+        {
+          "name": "cards-banner",
+          "instances": [
+            ".nextgen-banner-unit.nextgen-banner-unit_MediumBanner"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Carousel",
+          "selector": ".container-unit.hero-canvas-flex",
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Promotional Flex Cards",
+          "selector": ".row.hero-flex",
+          "style": null,
+          "blocks": [
+            "cards-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Spring Produce Product Carousel",
+          "selector": ".slick-product-carousel.clearfix:nth-of-type(1)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".carousel-nav__header-title"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Fresh and Easy Category Cards",
+          "selector": [
+            ".flex-title",
+            ".flex-container.flex-three-six-column"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-category"
+          ],
+          "defaultContent": [
+            ".flex-title"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Meat and Seafood Product Carousel",
+          "selector": ".slick-product-carousel.clearfix:nth-of-type(2)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".carousel-nav__header-title"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Featured Items Product Carousel",
+          "selector": ".slick-product-carousel.clearfix:nth-of-type(3)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".carousel-nav__header-title"
+          ]
+        },
+        {
+          "id": "section-7",
+          "name": "Quick Dinners Product Carousel",
+          "selector": ".slick-product-carousel.clearfix:nth-of-type(4)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".carousel-nav__header-title"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "Easy Dinners Category Cards",
+          "selector": [
+            ".flex-title",
+            ".flex-container.flex-three-six-column"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-category"
+          ],
+          "defaultContent": [
+            ".flex-title"
+          ]
+        },
+        {
+          "id": "section-9",
+          "name": "Trending and New Product Carousel",
+          "selector": ".slick-product-carousel.clearfix:nth-of-type(5)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".carousel-nav__header-title"
+          ]
+        },
+        {
+          "id": "section-10",
+          "name": "Celebrate Passover Product Carousel",
+          "selector": ".slick-product-carousel.clearfix:nth-of-type(6)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".carousel-nav__header-title"
+          ]
+        },
+        {
+          "id": "section-11",
+          "name": "Promotional Banners",
+          "selector": ".nextgen-banner-unit.nextgen-banner-unit_MediumBanner",
+          "style": null,
+          "blocks": [
+            "cards-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-12",
+          "name": "Footer",
+          "selector": ".footer-sub-conatainer",
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

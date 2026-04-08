@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.albertsons.com/",
+  "path": "index",
+  "timestamp": "2026-04-08T04:10:47.224Z",
+  "title": "Grocery Delivery Near You - Order Groceries Online | Albertsons",
+  "template": "homepage",
+  "blocks": [
+    "cards-category",
+    "cards-banner",
+    "cards-banner",
+    "cards-banner",
+    "cards-banner",
+    "cards-banner",
+    "cards-banner",
+    "cards-banner",
+    "cards-banner",
+    "cards-banner"
+  ]
+}

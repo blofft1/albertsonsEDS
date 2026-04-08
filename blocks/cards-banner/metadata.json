@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-banner",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-08T03:48:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.albertsons.com/",
+    "originPage": "Albertsons grocery homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "promotional-banner",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title + description + CTA link",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "medium promotional banners",
+      "service highlight banners",
+      "full-width promotional cards with CTAs"
+    ],
+    "notSuitableFor": [
+      "small product cards",
+      "grid-based category cards",
+      "text-only announcements"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-08T03:48:00.000Z"
+  }
+}

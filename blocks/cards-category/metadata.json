@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-category",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-08T03:48:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.albertsons.com/",
+    "originPage": "Albertsons grocery homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "category-navigation",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "category navigation cards",
+      "topic/section browsing tiles",
+      "recipe category cards"
+    ],
+    "notSuitableFor": [
+      "product detail cards",
+      "promotional banners",
+      "text-heavy content cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-08T03:48:00.000Z"
+  }
+}
