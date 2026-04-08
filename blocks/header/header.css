@@ -7,43 +7,6 @@ header .nav-wrapper {
   border-bottom: 1px solid var(--border-color-light);
 }
 
-/* topbar - above the main nav */
-header .nav-topbar {
-  border-bottom: 1px solid var(--border-color-light, #e0e0e0);
-  padding: 8px 24px;
-  max-width: 1248px;
-  margin: 0 auto;
-}
-
-header .nav-topbar ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-header .nav-topbar li {
-  font-size: var(--body-font-size-xs, 0.75rem);
-  font-weight: 500;
-}
-
-header .nav-topbar a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-header .nav-topbar a:hover {
-  text-decoration: underline;
-}
-
-@media (width >= 900px) {
-  header .nav-topbar {
-    padding: 8px 32px;
-    max-width: 1264px;
-  }
-}
-
 header nav {
   box-sizing: border-box;
   display: grid;
@@ -87,14 +50,13 @@ header nav[aria-expanded='true'] {
   }
 }
 
+header nav a:any-link {
+  color: currentcolor;
+}
+
 header nav p {
   margin: 0;
   line-height: 1;
-}
-
-/* stylelint-disable-next-line no-descending-specificity */
-header nav a:any-link {
-  color: currentcolor;
 }
 
 /* hamburger */
@@ -187,8 +149,7 @@ header .nav-brand {
   line-height: 0;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
-header .nav-brand a {
+header nav .nav-brand a {
   display: inline-block;
   text-decoration: none;
 }
@@ -278,7 +239,6 @@ header nav .nav-sections ul > li > ul > li {
     position: relative;
   }
 
-  /* Top-level plain links (Grocery, Health, Pharmacy) styled as tabs */
   header nav .nav-sections .default-content-wrapper > ul > li > a {
     font-size: var(--body-font-size-s);
     font-weight: 400;
@@ -334,11 +294,6 @@ header nav .nav-tools {
   font-weight: 600;
 }
 
-header nav .nav-tools p {
-  white-space: nowrap;
-}
-
-/* stylelint-disable-next-line no-descending-specificity */
 header nav .nav-tools a {
   color: var(--text-color);
   text-decoration: none;
@@ -351,13 +306,15 @@ header nav .nav-tools a:hover {
   color: var(--accent-color);
 }
 
-/* search icon in tools */
+header nav .nav-tools p {
+  white-space: nowrap;
+}
+
 header nav .nav-tools .icon-search {
   width: 20px;
   height: 20px;
 }
 
-/* search link styled as search bar on desktop */
 @media (width >= 900px) {
   header nav .nav-tools p:first-child a {
     padding: 6px 16px;
@@ -373,5 +330,42 @@ header nav .nav-tools .icon-search {
   header nav .nav-tools p:first-child a:hover {
     border-color: var(--text-color);
     color: var(--text-color);
+  }
+}
+
+/* topbar - above the main nav, outside <nav> element */
+header .nav-wrapper .nav-topbar {
+  border-bottom: 1px solid var(--border-color-light, #e0e0e0);
+  padding: 8px 24px;
+  max-width: 1248px;
+  margin: 0 auto;
+}
+
+header .nav-wrapper .nav-topbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .nav-wrapper .nav-topbar li {
+  font-size: var(--body-font-size-xs, 0.75rem);
+  font-weight: 500;
+}
+
+header .nav-wrapper .nav-topbar a:any-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+header .nav-wrapper .nav-topbar a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  header .nav-wrapper .nav-topbar {
+    padding: 8px 32px;
+    max-width: 1264px;
   }
 }
