@@ -1,4 +1,4 @@
-/* Cards Promo - Albertsons 2-column promotional cards with full-bleed images */
+/* Cards Promo - Albertsons sidebar promotional cards (stacked beside hero carousel) */
 
 .cards-promo > ul {
   list-style: none;
@@ -28,34 +28,53 @@
 }
 
 .cards-promo .cards-promo-card-body {
-  padding: var(--spacing-l) 0 0 var(--spacing-m);
-  min-height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: var(--spacing-m);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-xxs);
 }
 
 .cards-promo .cards-promo-card-body h3 {
-  font-family: var(--heading-font-family);
+  font-family: var(--body-font-family);
   font-size: var(--heading-font-size-s);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
   color: var(--text-color);
   margin: 0;
 }
 
+.cards-promo .cards-promo-card-body p {
+  margin: 0;
+}
+
 .cards-promo .cards-promo-card-body a {
   font-weight: 600;
+  font-size: var(--body-font-size-s);
   color: var(--text-color);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .cards-promo .cards-promo-card-body a:hover {
   color: var(--accent-color);
 }
 
+/* On mobile: full-width row of 2 cards */
 @media (width >= 600px) {
   .cards-promo > ul {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* On desktop when next to carousel: stack vertically as sidebar */
+@media (width >= 900px) {
+  .cards-promo > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-promo > ul > li img {
+    aspect-ratio: 4 / 3;
   }
 }

@@ -396,3 +396,19 @@ main .section.grey {
   margin: 0;
   padding: var(--spacing-xxl) 0;
 }
+
+/* Hero + sidebar layout: carousel left, promo cards right */
+@media (width >= 900px) {
+  main > .section:has(.carousel-hero) > div {
+    display: contents;
+  }
+
+  main > .section:has(.carousel-hero) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: var(--spacing-m);
+    padding: 0 var(--spacing-xl);
+    max-width: var(--section-max-width);
+    margin: 0 auto;
+  }
+}
