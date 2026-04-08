@@ -25,3 +25,88 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* Banner variant - full-width promotional banners with text overlay */
+.cards.banner > ul {
+  grid-template-columns: 1fr;
+  gap: var(--spacing-m, 16px);
+}
+
+.cards.banner > ul > li {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 160px;
+  background-color: #f5f3ef;
+  border: none;
+}
+
+.cards.banner > ul > li img {
+  aspect-ratio: 16 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.cards.banner .cards-card-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 32px;
+  max-width: 50%;
+  margin: 0;
+  z-index: 1;
+}
+
+.cards.banner .cards-card-body h3 {
+  font-family: var(--body-font-family);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-color);
+  margin: 0 0 6px;
+}
+
+.cards.banner .cards-card-body p {
+  font-size: var(--body-font-size-s, 0.875rem);
+  color: var(--text-color);
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.cards.banner .cards-card-body a {
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--body-font-size-s, 0.875rem);
+}
+
+.cards.banner .cards-card-body a::after {
+  content: '›';
+  font-size: 1.25em;
+  line-height: 1;
+}
+
+.cards.banner .cards-card-body a:hover {
+  color: var(--accent-color);
+}
+
+@media (width >= 900px) {
+  .cards.banner .cards-card-body h3 {
+    font-size: 1.5rem;
+  }
+
+  .cards.banner .cards-card-body p {
+    font-size: var(--body-font-size-m, 1rem);
+  }
+
+  .cards.banner .cards-card-body {
+    padding: 32px 40px;
+  }
+}

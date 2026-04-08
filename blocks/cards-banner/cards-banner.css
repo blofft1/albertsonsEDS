@@ -15,6 +15,7 @@
   overflow: hidden;
   min-height: 160px;
   background-color: #f5f3ef;
+  border: none;
 }
 
 .cards-banner .cards-banner-card-image {
