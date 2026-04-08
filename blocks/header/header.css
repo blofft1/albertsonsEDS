@@ -143,22 +143,20 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
+  flex-basis: 148px;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
-  line-height: 1;
+  line-height: 0;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
 header .nav-brand a {
-  color: var(--accent-color);
-  font-family: var(--heading-font-family);
-  font-weight: 700;
+  display: inline-block;
   text-decoration: none;
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 148px;
   height: auto;
 }
 
@@ -291,15 +289,50 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   font-size: var(--body-font-size-s);
   font-weight: 600;
+}
+
+header nav .nav-tools p {
+  white-space: nowrap;
 }
 
 header nav .nav-tools a {
   color: var(--text-color);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 header nav .nav-tools a:hover {
   color: var(--accent-color);
+}
+
+/* search icon in tools */
+header nav .nav-tools .icon-search {
+  width: 20px;
+  height: 20px;
+}
+
+/* search link styled as search bar on desktop */
+@media (width >= 900px) {
+  header nav .nav-tools p:first-child a {
+    padding: 6px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--button-border-radius);
+    font-weight: 400;
+    color: var(--text-color-muted);
+    min-width: 140px;
+    font-size: var(--body-font-size-xs);
+    transition: border-color var(--transition-base);
+  }
+
+  header nav .nav-tools p:first-child a:hover {
+    border-color: var(--text-color);
+    color: var(--text-color);
+  }
 }
